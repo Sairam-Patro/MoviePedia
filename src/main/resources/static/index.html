@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoviePedia - Bollywood Movie Discovery</title>
+    <meta name="description" content="Discover iconic Bollywood movies, ratings, reviews, and stories on MoviePedia.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loader" class="loader-container">
+        <div class="spinner"></div>
+    </div>
+
+    <header id="header">
+        <nav class="navbar">
+            <div class="logo">Movie<span>Pedia</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#featured">Featured</a></li>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        
+        <div id="home" class="hero">
+            <div class="hero-bg" style="background-image: url('assets/images/hero_banner.png');"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="fade-in-up">Movie<span>Pedia</span></h1>
+                <p class="fade-in-up delay-1">Discover iconic Bollywood movies, ratings, reviews, and stories.</p>
+                <a href="#movies" class="cta-button fade-in-up delay-2">Explore Movies</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="featured" class="featured-section">
+            <h2 class="section-title">Featured Hits</h2>
+            <div class="featured-grid" id="featured-container">
+                <!-- Dynamically populated by JS -->
+            </div>
+        </section>
+
+        <section id="movies" class="movies-section">
+            <h2 class="section-title">Explore Bollywood</h2>
+            
+            <div class="controls-container">
+                <input type="text" id="search-input" placeholder="Search movies...">
+                <select id="genre-filter">
+                    <option value="all">All Genres</option>
+                    <!-- Options populated by JS -->
+                </select>
+            </div>
+
+            <div class="movies-grid" id="movies-container">
+                <!-- Dynamically populated by JS -->
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <p>“MoviePedia is a simple movie discovery platform showcasing Bollywood classics and modern hits with ratings, reviews, and introductions.”</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Movie<span>Pedia</span></div>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook">FB</a>
+                <a href="#" aria-label="Twitter">TW</a>
+                <a href="#" aria-label="Instagram">IG</a>
+            </div>
+            <p class="copyright">&copy; 2026 MoviePedia. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="scroll-top" class="scroll-top-btn" aria-label="Scroll to top">↑</button>
+
+    <!-- Review Modal -->
+    <dialog id="review-modal" class="modal">
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn">&times;</button>
+            <h3 id="modal-movie-title">Movie Title</h3>
+            <div class="reviews-container" id="reviews-container">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
